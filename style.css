@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+   background-color: #ffff;
+}
+
+.navbar{
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    box-sizing: border-box; /* include padding in width */
+  
+}
+.navbarIcons{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo{
+    padding: 10px;
+}
+.logo>img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  
+}
+.navbarCenter{
+     width: 90%;
+    max-width: 600px;
+}
+
+ .search-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background: white;
+  }
+
+  .search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+   
+  }
+
+  .search-container button svg {
+    width: 20px;
+    height: 20px;
+   
+  }
+  .microphone{
+    display: flex;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .microphone:hover{
+     background-color: #d1d0d0;
+
+  }
+  .microphone >img{
+    width: 20px;
+    height: 20px;
+  }
+  .lastIcons{
+    padding-right: 20px;
+  
+  }
+
+  .create{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color:  #f2f2f2;;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .create:hover{
+      background-color: #d1d0d0;
+  }
+  .bellIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+  .bellIcon:hover{
+     background-color: #d1d0d0;
+     border-radius: 50%;
+
+    
+    
+  }
+
+
+
+
+
+.screenContainer{
+    display: flex;
+    width: 100%;
+}
+.left{
+
+    width: 80px;
+    height: 88vh;
+    flex-shrink: 0;
+
+}
+.mainIcons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+}
+.iconsLeft{
+    
+    width: 59px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.iconsLeft>p{
+    
+    font-size: 12px;
+    text-align: center;
+   
+}
+.iconsLeft>img{
+    height: 25px;
+}
+
+
+.iconsLeft:hover{
+    background-color: #f2f2f2;
+    border-radius:10px ;
+}
+.hamburger{
+    width: 59px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    
+}
+.hamburger:hover{
+    background-color: #f2f2f2;
+    border-radius:50%;
+  
+}
+
+
+
+.right{
+
+    height: 81vh;
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    min-width: 600px;
+  
+}
+
+.videoCardCotainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-height: 80vh;
+  overflow-y: scroll;
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(33.33% - 20px); 
+  max-width: 359px; 
+  height: auto;
+}
+
+.card img {
+  border-radius: 20px;
+  border: 0;
+  width: 100%; 
+  height: auto;
+}
+
+/* For screens smaller than 900px → 2 cards */
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 780px) {
+  .left {
+    display: none;
+
+  } 
+
+  .navbar{
+    justify-content: start;
+    gap: 10px;
+  }
+
+}
+@media (max-width: 700px) {
+  .search-container input{
+    width: 40%;
+   
+  }
+  .navbar{
+     gap: 50px;
+  }
+}
+@media (max-width: 630px) {
+
+}
+/* For screens smaller than 500px → 1 card */
+@media (max-width: 550px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 800px;
+  }
+  .videoCardCotainer{
+     flex: 1;         /* Fill remaining space inside .right */
+     max-height: 138vh;    /* Match parent's height */
+   
+   
+  }
+  .right{
+    flex: none;
+    width: 100%;
+    height: 138vh;  /* Full screen height */
+    display: flex;
+    flex-direction: column;
+  }
+  .card h4{
+    font-size: 30px;
+  }
+
+
+}
